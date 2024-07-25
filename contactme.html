@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page Design</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="stylep.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <a href="#" class="logo">portfolio</a>
+        <ul>
+          <li><a href="C:\Users\THANUSHA\Downloads\index.html">Home</a></li>
+          <li><a href="C:\Users\THANUSHA\Downloads\aboutme.html">About</a></li>
+          <li><a href="C:\Users\THANUSHA\Downloads\educationdetails.html">Education Details</a></li>
+          <li><a href="C:\Users\THANUSHA\Downloads\projects.html">Projects</a></li>
+          <li><a href="C:\Users\THANUSHA\Downloads\skills.html">Skills</a></li>
+          <li><a href="C:\Users\THANUSHA\Downloads\contactme.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h2>Get in touch</h2>
+      <p>Feel free to contact me about anything related to Web Development.</p>
+      <form class="contact-form">
+        <div class="input-area">
+          <input type="text" placeholder="Your name" />
+        </div>
+        <div class="input-area">
+          <input type="email" placeholder="Email address" />
+        </div>
+        <div class="input-area">
+          <input type="text" placeholder="Subject" />
+        </div>
+        <div class="input-area h-80">
+          <textarea placeholder="Your message"></textarea>
+        </div>
+        <button class="sendbtn">Send</button>
+      </form>
+    </div>
+    
+   <!-- <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>bhavya</span></strong>. All Rights Reserved
+        </div>
+        </div>
+      </div>
+    </footer>-->
+    <script>
+      const contactform = document.querySelector('.contact-form');
+const container = document.querySelector('.container');
+
+contactform.addEventListener('submit', (event) => {
+	event.preventDefault();
+	container.innerHTML = '<p>Thanks for your message. <br /> I\'ll respond to you shortly</p>';
+});
+
+const connectbtn = document.querySelector('.connect-btn');
+const crossbtn = document.querySelector('.cross-btn');
+const socialcontainer = document.querySelector('.social-container');
+
+connectbtn.addEventListener('click', () => {
+	socialcontainer.classList.toggle('visible')
+});
+
+crossbtn.addEventListener('click', () => {
+	socialcontainer.classList.remove('visible')
+});
+      
+    </script>
+
+  </body>
+</html>
